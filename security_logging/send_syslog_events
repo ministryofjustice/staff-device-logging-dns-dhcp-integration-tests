@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -euo pipefail
+
+while true; do
+  python -c "import syslog_client; s = syslog_client.Syslog(host=${SYSLOG_ENDPOINT_IP}); s.send({\"host\": \"Staff-Device-Syslog-Host\", \"ident\": \"1\", \"message\": \"Hello Syslogs\", \"pri\": \"134\"}, syslog_client.Level.WARNING);"
+  sleep 5
+done

@@ -1,0 +1,2 @@
+docker build --network host -t syslog_test --build-arg syslog_endpoint_ip=${SYSLOG_ENDPOINT_IP} .
+docker run --network host -t syslog_test
