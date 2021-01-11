@@ -1,0 +1,1 @@
+perfdhcp -4 $ENDPOINT_IP -r10 -R 5000000 -W3 -t1 -d2

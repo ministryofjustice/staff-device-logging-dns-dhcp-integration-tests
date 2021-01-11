@@ -1,8 +1,5 @@
 #!/bin/bash
 
-while true; do
-  docker build --network host -t test . > /dev/null
-  docker run --network host -t test >> ./test_results
-  sleep 2
-done;
+docker build --network host -t test .
+docker run --network host -t test
 

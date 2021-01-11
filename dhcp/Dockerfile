@@ -14,7 +14,9 @@ WORKDIR /home
 RUN chown root:root /home
 RUN  mkdir /var/run/kea
 
+COPY ./run_perfdhcp ./run_perfdhcp
+
 EXPOSE 67/udp
 EXPOSE 68/udp
 
-CMD ["perfdhcp", "10.180.81.4", "-n", "100", "-r", "5", "-R", "5"]
+CMD ["sh", "-c", "./run_perfdhcp"]
