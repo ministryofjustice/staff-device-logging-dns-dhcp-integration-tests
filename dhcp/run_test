@@ -1,5 +1,4 @@
 #!/bin/bash
 
-docker build --network host -t test .
+docker build --platform=linux/amd64 --network host -t test .
 docker run --network host -t test
-
